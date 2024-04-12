@@ -4,11 +4,9 @@ and writes all digits in a single file or array
 """
 import os
 
-
 path = os.path.abspath(os.getcwd())
 path_file = path + "/input/"
-lines = []
-
+files = []
 
 # This is a sample Python script.
 
@@ -16,18 +14,22 @@ lines = []
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
 
-def print_hi(name):
-    """
-    This is a placeholder Code
-    :param name:
-    :return:
-    """
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    dir_list = os.listdir(path_file)
+    print(dir_list)
+    files: list[str] = dir_list
+
+    for file in files:
+        print(file)
+
+    number: str = " "
+    alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t",
+                "u", "v", "w", "x", "y", "z" ]
+    i = 0
+    for i in range(len(files)):
+        number: str = str(i + 1) + ". "
+        print(number + files[i])
+
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
