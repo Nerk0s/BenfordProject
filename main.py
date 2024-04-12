@@ -1,3 +1,7 @@
+"""
+This Programm reads a single or a group of pdf files
+and writes all digits in a single file or array
+"""
 # This is a sample Python script.
 
 # Press Maj+F10 to execute it or replace it with your code.
@@ -5,6 +9,11 @@
 
 
 def print_hi(name):
+    """
+    This is a placeholder Code
+    :param name:
+    :return:
+    """
     # Use a breakpoint in the code line below to debug your script.
     print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
 

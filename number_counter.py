@@ -1,5 +1,5 @@
 """
-this module has as purpose, to count all the digits from a single or a group of pdf files
+this module has as purpose, to count all the digits from a text file or array
 """
 
 
