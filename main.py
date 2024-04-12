@@ -2,6 +2,14 @@
 This Programm reads a single or a group of pdf files
 and writes all digits in a single file or array
 """
+import os
+
+
+path = os.path.abspath(os.getcwd())
+path_file = path + "/input/"
+lines = []
+
+
 # This is a sample Python script.
 
 # Press Maj+F10 to execute it or replace it with your code.
