@@ -1,5 +1,14 @@
 # BenfordProject
 
+## Setup
+### Requirements
+- Python 3.12
+- Conda 4.10.3
+
+```conda create -n benfordvenv python=3.12```
+
+```conda activate benfordvenv```
+
 ## Definition of Benford's Law
 ### English
 ___
