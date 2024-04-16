@@ -9,6 +9,7 @@
 
 ```conda activate benfordvenv```
 
+----
 ## Definition of Benford's Law
 ### English
 ___
