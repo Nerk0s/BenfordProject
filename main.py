@@ -1,4 +1,5 @@
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
+# See PyCharm help at https://www.jetbrains.com/help/pycharm/quick-start-guide.html
 
 import sys
 import os
@@ -7,8 +8,9 @@ import datetime
 import json
 import logging
 import pptx # pip install python-pptx
+# Documentation: https://python-pptx.readthedocs.io/en/latest/index.html
 import docx # pip install python-docx
-
+# Documentation: https://python-docx.readthedocs.io/en/latest/index.html
 
 if __name__ == '__main__':
     # Create a logger
