@@ -1,14 +1,14 @@
 @Echo off
 
 
-
+conda create -n benfordvenv python=3.12
 conda activate benfordvenv
 pip install python-docx
 pip install python-pptx
 
 pip install python-docx
 
-conda create -n benfordvenv python=3.12
+
 
 pip install PyPDF2
 
