@@ -1,16 +1,15 @@
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
-
 import sys
 import os
 import time
 import datetime
 import json
 import logging
-import pptx # pip install python-pptx
-import docx # pip install python-docx
+import pptx  # pip install python-pptx
+import docx  # pip install python-docx
+import benfordslaw as bl
 
 
-if __name__ == '__main__':
+def setup():
     # Create a logger
     logging.basicConfig(level=logging.DEBUG)
     logger = logging.getLogger(__name__)
@@ -60,24 +59,6 @@ if __name__ == '__main__':
     # Log the Python executable
     logger.info(f"Python executable: {sys.executable}")
 
-    # Print the Python prefix
-    print(f"Python prefix: {sys.prefix}")
-
-    # Log the Python prefix
-    logger.info(f"Python prefix: {sys.prefix}")
-
-    # Print the Python platform
-    print(f"Python platform: {sys.platform}")
-
-    # Log the Python platform
-    logger.info(f"Python platform: {sys.platform}")
-
-    # Print the Python implementation
-    print(f"Python implementation: {sys.implementation}")
-
-    # Log the Python implementation
-    logger.info(f"Python implementation: {sys.implementation}")
-
     # Print the Python version info
     print(f"Python version info: {sys.version_info}")
 
@@ -86,3 +67,10 @@ if __name__ == '__main__':
 
     # Print the Python version info major
     print(f"Python version info major: {sys.version_info.major}")
+
+
+def benford():
+    input("Press Enter if you have pasted the files for verification if they follow Benford's Law")
+    setup()
+
+    #
