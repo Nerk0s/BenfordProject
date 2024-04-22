@@ -4,6 +4,9 @@ import time
 import datetime
 import json
 import logging
+from logging import Logger
+from venv import logger
+
 import pptx  # pip install python-pptx
 import docx  # pip install python-docx
 import benfordslaw as bl
@@ -12,7 +15,7 @@ import benfordslaw as bl
 def setup():
     # Create a logger
     logging.basicConfig(level=logging.DEBUG)
-    logger = logging.getLogger(__name__)
+    logging.getLogger(__name__)
 
     # Get the current date and time
     current_date_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -23,45 +26,6 @@ def setup():
     # Log the current date and time
     logger.info(f"Current date and time: {current_date_time}")
 
-    # Print the command line arguments
-    print(f"Command line arguments: {sys.argv}")
-
-    # Log the command line arguments
-    logger.info(f"Command line arguments: {sys.argv}")
-
-    # Print the current working directory
-    print(f"Current working directory: {os.getcwd()}")
-
-    # Log the current working directory
-    logger.info(f"Current working directory: {os.getcwd()}")
-
-    # Print the environment variables
-    print(f"Environment variables: {os.environ}")
-
-    # Log the environment variables
-    logger.info(f"Environment variables: {os.environ}")
-
-    # Print the Python version
-    print(f"Python version: {sys.version}")
-
-    # Log the Python version
-    logger.info(f"Python version: {sys.version}")
-
-    # Print the Python path
-    print(f"Python path: {sys.path}")
-
-    # Log the Python path
-    logger.info(f"Python path: {sys.path}")
-
-    # Print the Python executable
-    print(f"Python executable: {sys.executable}")
-
-    # Log the Python executable
-    logger.info(f"Python executable: {sys.executable}")
-
-    # Print the Python version info
-    print(f"Python version info: {sys.version_info}")
-
     # Log the Python version info
     logger.info(f"Python version info: {sys.version_info}")
 
@@ -69,8 +33,29 @@ def setup():
     print(f"Python version info major: {sys.version_info.major}")
 
 
-def benford():
-    input("Press Enter if you have pasted the files for verification if they follow Benford's Law")
-    setup()
+def files_listing(file):
+    for file in os.listdir(file):
+        logger.info(f"File: {file}")
 
-    #
+
+def benford():
+    print("Benford Law \n Press Enter if you have pasted the files for verification if they follow Benford's Law:")
+    str_input = input()
+    if str_input == '':
+        setup()
+
+    # get the input path from the config file TODO Correct it
+    with open('config.json') as f:
+        data = json.load(f)
+        if data['input_path'] != "":
+            input_path = data['input_path']
+
+    # get the files from the input path
+
+    files = os.listdir(input_path)
+    print(files)
+    files_listing(files)
+
+    # get the file extension
+    file_extension = os.path.splitext(files[0])[1]
+    print(file_extension)
